@@ -11,7 +11,7 @@ const dmMono = DM_Mono({ variable: "--font-dm-mono", subsets: ["latin"], weight:
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"),
   title: {
-    default: "Portfolio | Personal Profile",
+    default: "Portfolio | Nabila Anas",
     template: "%s | Portfolio",
   },
   description: "Personal portfolio showcasing projects, organizational experience, achievements, and professional journey.",

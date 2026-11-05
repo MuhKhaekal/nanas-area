@@ -9,7 +9,7 @@ const navigation = [
   { label: "About", href: "#about" },
   { label: "Skills", href: "#skills" },
   { label: "Experience", href: "#journey" },
-  { label: "Community", href: "#organizations" },
+  { label: "Organization", href: "#organizations" },
   { label: "Awards", href: "#achievements" },
   { label: "Projects", href: "#projects" },
   { label: "Contact", href: "#contact" },
@@ -33,10 +33,15 @@ export default function Navbar() {
 
         <div className="hidden items-center gap-5 lg:gap-7 lg:flex">
           {navigation.map((item, index) => (
-            <a key={item.href} href={item.href} className="group relative py-2 text-sm text-muted transition-colors hover:text-foreground">
-              {item.label}
-
-              <span className="absolute inset-x-0 bottom-0 h-px origin-left scale-x-0 bg-accent transition-transform duration-200 group-hover:scale-x-100" />
+            <a
+              key={item.href}
+              href={item.href}
+              onClick={() => {
+                setIsMenuOpen(false);
+              }}
+              className="flex min-h-12 items-center justify-between rounded-lg px-3 text-base text-foreground transition-colors hover:bg-surface hover:text-accent focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+            >
+              <span>{item.label}</span>
             </a>
           ))}
 
